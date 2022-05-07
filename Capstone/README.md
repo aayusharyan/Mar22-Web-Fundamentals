@@ -38,3 +38,5 @@ http://localhost:5500/Capstone/VideoBuddy/detail.html?id=_iz5_DuY_II
 https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&relatedToVideoId=[VIDEO_ID]&type=video&key=[YOUR_API_KEY]
 
 http://localhost:5500/Capstone/VideoBuddy/search.html?q=abcd
+
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=[SEARCH_STRING]&type=video&key=[YOUR_API_KEY]

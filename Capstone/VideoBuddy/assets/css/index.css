@@ -1,0 +1,22 @@
+.card:hover {
+  z-index: 9999;
+  transform: scale(1.15);
+  border: 1px solid black;
+}
+
+.card {
+  transition: all 0.25s;
+}
+
+.mini_player {
+  display: none;
+  /* visibility: hidden; */
+}
+
+.card:hover .mini_player {
+  display: initial;
+}
+
+.card:hover .card-img-top {
+  display: none;
+}

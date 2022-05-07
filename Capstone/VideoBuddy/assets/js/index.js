@@ -1,4 +1,4 @@
-fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=24&key=AIzaSyAdWaVR_CQXV4SELrqkK6_qbtvsepjE03o')
+fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=24&key=AIzaSyA1XOmdurAgAOnlnO0HfuqSA0nXh3Z58qc')
 .then((res) => {
   return res.json();
 }).then((data) => {
@@ -35,11 +35,19 @@ fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDe
     image_elem.src = thumbnail;
     image_elem.classList.add("card-img-top");
 
+    const iframe_elem = document.createElement('iframe');
+    iframe_elem.setAttribute('frameborder', '0');
+    iframe_elem.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe_elem.allowFullscreen = true;
+    iframe_elem.classList.add('mini_player');
+    iframe_elem.src = "https://www.youtube.com/embed/" + video_id;
+
     const div_elem_1 = document.createElement('div');
     div_elem_1.classList.add("card");
     div_elem_1.classList.add("my-2");
     div_elem_1.style.width = "100%";
     div_elem_1.appendChild(image_elem);
+    div_elem_1.appendChild(iframe_elem);
     div_elem_1.appendChild(div_elem);
 
     const div_elem_2 = document.createElement('div');
